@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCart | Future-Ready E-Commerce</title>
+    <meta name="description"
+        content="Experience the future of shopping with NovaCart. Premium products, seamless interface, and ultra-modern design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="logo.png" alt="NovaCart">
+                <div class="star-glow"></div>
+            </div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="loader-text">Preparing your future...</p>
+            <button id="enter-btn" class="enter-btn">ENTER NOVACART</button>
+        </div>
+    </div>
+
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.png" alt="NovaCart Logo">
+                    <span>NovaCart</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle Theme">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon"></i>
+                    </button>
+                    <button id="wishlist-btn" class="icon-btn">
+                        <i data-lucide="heart"></i>
+                        <span class="badge">0</span>
+                    </button>
+                    <button id="cart-btn" class="icon-btn">
+                        <i data-lucide="shopping-bag"></i>
+                        <span class="badge">0</span>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Elevate Your <span class="gradient-text">Lifestyle</span></h1>
+                    <p class="hero-subtitle">Discover the next generation of premium tech and accessories designed for
+                        the future.</p>
+                    <div class="hero-btns">
+                        <a href="#shop" class="btn-primary">Shop Now</a>
+                        <a href="#featured" class="btn-secondary">View Featured</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-glow"></div>
+                    <!-- This will be replaced by a generated image via JS or CSS bg -->
+                    <img src="product_1_watch.png" alt="Featured Product" class="floating-img"
+                        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800';">
+                </div>
+            </section>
+
+            <!-- Shop Section -->
+            <section id="shop" class="shop-section">
+                <div class="section-header">
+                    <h2>Our <span class="gradient-text">Collection</span></h2>
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="tech">Tech</button>
+                        <button class="filter-btn" data-filter="audio">Audio</button>
+                        <button class="filter-btn" data-filter="wearables">Wearables</button>
+                    </div>
+                </div>
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be injected here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebars -->
+        <aside id="cart-sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>Your Cart</h3>
+                <button class="close-sidebar"><i data-lucide="x"></i></button>
+            </div>
+            <div class="sidebar-content cart-items" id="cart-items">
+                <!-- Cart items here -->
+                <div class="empty-state">Your cart is empty</div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="subtotal">
+                    <span>Subtotal</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn-primary full-width" id="checkout-btn">Checkout</button>
+            </div>
+        </aside>
+
+        <aside id="wishlist-sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>Wishlist</h3>
+                <button class="close-sidebar"><i data-lucide="x"></i></button>
+            </div>
+            <div class="sidebar-content wishlist-items" id="wishlist-items">
+                <!-- Wishlist items here -->
+                <div class="empty-state">Your wishlist is empty</div>
+            </div>
+        </aside>
+
+        <!-- Product Detail Modal -->
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal"><i data-lucide="x"></i></button>
+                <div class="modal-body">
+                    <!-- Detail content here -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.png" alt="NovaCart Logo">
+                        <span>NovaCart</span>
+                    </div>
+                    <p>Building the future of e-commerce with premium design and cutting-edge tech. We bring the future
+                        to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="link-group">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Special Editions</a></li>
+                        <li><a href="#">Refurbished</a></li>
+                    </ul>
+                </div>
+                <div class="link-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get notified about new drops and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn-primary">Join</button>
+                    </form>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 NovaCart. Designed for the future. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
